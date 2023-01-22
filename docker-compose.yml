@@ -1,0 +1,54 @@
+version: '3.1'
+
+services:
+
+  app:
+    image: jotrial31/tp_img-app
+    container_name: app
+    ports:
+      - 5000:5000
+    networks:
+      - testing
+
+  PEP:
+    image: jotrial31/tp_img-pep
+    container_name: pep
+    networks:
+      - testing
+    volumes:
+      - /home/jonathan/TP/app:/app
+    
+  metric-static:
+    image: jotrial31/tp_img-metric-static
+    container_name: metric-static
+    networks:
+      - testing
+    volumes:
+      - /home/jonathan/TP/app:/app
+
+  metric-cc:
+    image: jotrial31/tp_img-metric-cc
+    container_name: metric-cc
+    networks:
+      - testing
+    volumes:
+      - /home/jonathan/TP/app:/app
+
+  system:
+    image: jotrial31/tp_img-system
+    container_name: system
+    networks:
+      - testing
+    volumes:
+      - /home/jonathan/TP/app:/app
+
+  unit:
+    image: jotrial31/tp_img-unit
+    container_name: unit
+    networks:
+      - testing
+    volumes:
+      - /home/jonathan/TP/app:/app
+
+networks:
+  testing:

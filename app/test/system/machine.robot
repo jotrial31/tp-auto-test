@@ -1,13 +1,13 @@
 *** Settings ***
 Documentation  API Testing in Robot Framework
-Library  SeleniumLibrary
+#Library  SeleniumLibrary
 Library  RequestsLibrary
-Library  JSONLibrary
+#Library  JSONLibrary
 Library  Collections
 
 *** Variables ***
 
-${BASE_URL}  http://localhost:5000/
+${BASE_URL}  http://app:5000/
 
 *** Test Cases ***
 Do a GET Request and validate the response code and response body

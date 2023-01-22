@@ -45,7 +45,7 @@ class TestApplication(unittest.TestCase):
 
 test1 = unittest.TestLoader().loadTestsFromTestCase(TestApplication)
 suite = unittest.TestSuite([test1])
-runner = HtmlTestRunner.HTMLTestRunner(verbosity=2, output='reports/unittest/', report_name='report')
+runner = HtmlTestRunner.HTMLTestRunner(verbosity=2, output='app/reports/unittest/', report_name='report')
 runner.run(suite)
 
 
